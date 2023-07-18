@@ -16,10 +16,14 @@
 html {
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    overflow: auto;
+    position: absolute;
+    height: auto;
 }
 
 body {
     background-color: var(--success-color);
+    height: auto;
 }
 
 .container {
@@ -67,7 +71,8 @@ body {
     padding: 10px;
     text-decoration: none;
     font-size: 0.7rem;
-    color: var(--success-color)
+    color: var(--success-color);
+    cursor: pointer;
 }
 
 .bar-link:active {
@@ -89,7 +94,8 @@ body {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    
+    background-color: #4f3d3981;
+       
 }
 
 @keyframes arvore {
@@ -161,25 +167,15 @@ body {
 
 .top-bar {
     color: var(--success-color);
-    width: 80px;
-    height: 80px;
-    background-color: var(--secondary-color);
-    text-align: center;
-    padding: 20px 0;
-    text-transform: uppercase;
-    font-weight: 700;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    cursor: pointer;
-    border-radius: 50% 20% 10% 20%;
-    transition-property: height, background-color, width;
-    transition-duration: 500ms, 1s, 500ms;
-    transition-timing-function: ease;
     animation-name: botao;
-    animation-duration: 1s;
+    animation-duration: 1.4s;
     animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    overflow: auto;
+    cursor: pointer;
 }
 
 @keyframes botao {
@@ -190,13 +186,6 @@ body {
         bottom: 30px;
     }
 }
-
-.top-bar:hover {
-    height: 150px;
-    width: 150px;
-    background-color: #0000ff;
-}
-
 
 .pseudo {
     border: #000 solid 1px;
@@ -292,9 +281,12 @@ p{
 .icones :nth-child(3){
     padding-bottom: 30px;
 }
-
-
-
-
-
+.icon-topbar::after {
+    content: "\f062";
+    overflow: auto;
+}
+.active{
+color: var(--primary-color);
+    font-weight: 900;
+}
 
