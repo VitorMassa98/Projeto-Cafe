@@ -7,7 +7,7 @@ function valida() {
         // let regex = /^[0-9]/;
         // let testando = regex.test(valor);
 
-        if (valor === '' && valor.length < 10) {
+        if (valor === '') {
             formPreenchido.push('error');
             input.classList.add('error');
         } else {
